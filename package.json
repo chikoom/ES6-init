@@ -1,0 +1,17 @@
+{
+  "name": "projectbasebabelwebpack",
+  "version": "1.0.0",
+  "description": "Base project for ES6 with Babel and Webpack",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ES6",
+    "webpack",
+    "babel",
+    "base"
+  ],
+  "author": "Idan Baron Chikoom",
+  "license": "MIT"
+}
