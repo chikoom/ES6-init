@@ -4,7 +4,8 @@
   "description": "Base project for ES6 with Babel and Webpack",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack"
   },
   "keywords": [
     "ES6",
@@ -19,6 +20,7 @@
     "@babel/preset-env": "^7.9.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
-    "webpack": "^4.42.1"
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }
