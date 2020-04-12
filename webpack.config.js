@@ -9,10 +9,7 @@ module.exports = {
 			{
 				test: /\.js?/,
 				loader: 'babel-loader',
-				exclude: /node_modules/,
-				query: {
-					presets: ['env']
-				}
+				exclude: /node_modules/
 			}
 		]
 	}
