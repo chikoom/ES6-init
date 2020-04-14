@@ -280,3 +280,41 @@ console.log(courses[id]);
 
 
 // Iterators
+
+var word = "Kundofon";
+
+console.log(typeof word[Symbol.iterator]);
+
+var iterateIt = word[Symbol.iterator]();
+
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+console.log(iterateIt.next());
+
+function tableReady(arr){
+	var nextIndex = 0;
+	return {
+		next() {
+			if(nextIndex < arr.length){
+				return {value: arr.shift(), done:false}
+			}
+			else{
+				return {done:true}
+			}
+		}
+	}
+}
+
+var waitingList = ["Idan", "Galit", "Kundofon"];
+var iterateList = tableReady(waitingList);
+
+console.log(`${iterateList.next().value} - Your table is ready`);
+console.log(`${iterateList.next().value} - Your table is ready`);
+console.log(`${iterateList.next().value} - Your table is ready`);
+console.log(`${iterateList.next().done} - Your table is ready`);
