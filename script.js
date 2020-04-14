@@ -261,3 +261,22 @@ var abc = setInterval(function(){
 		console.log(letter.value);
 	}
 },1000)
+
+// Symblos premitive type
+
+var id = Symbol();
+
+var courses = {
+	name:"ES6",
+	topics:["JS", "functions", "Symbols"],
+	id: "learning-js",
+};
+
+courses[id] = 5555;
+
+console.log(courses);
+console.log(courses.id);
+console.log(courses[id]);
+
+
+// Iterators
