@@ -94,3 +94,33 @@ var cats = ["Tabby", "Siamese", "Persian"];
 		var animals = ["Whale", "Giraffe", ...cats, "Snake", ...dogs, "Coyote"];
 
 		console.log(animals);
+
+
+
+for (let letter of 'JavaScript') {
+			console.log(letter);
+		}
+
+		var topics = ['JavaScript', 'Node', 'React'];
+
+		for (let topic of topics) {
+			console.log(topic);
+		}
+
+		var topics = new Map();
+		topics.set('HTML', '/class/html');
+		topics.set('CSS', '/class/css');
+		topics.set('JavaScript', '/class/javascript');
+		topics.set('Node', '/class/node');
+
+		for (let topic of topics.keys()) {
+			console.log(topic, "is the course name");
+		}
+
+		for (let topic of topics.values()) {
+			console.log("The course description can be found at", topic);
+		}
+
+		for (let course of topics.entries()) {
+			console.log(course);
+		}
