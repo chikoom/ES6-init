@@ -227,3 +227,37 @@ function vecationMarketing({destination, days}) {
 console.log(vecationMarketing(vecation));
 
 // Generators
+function* director() {
+	yield "Three";
+	yield "Two";
+	yield "One";
+	yield "Action!";
+}
+var action = director();
+console.log(action.next().value);
+console.log(action.next().value);
+console.log(action.next().value);
+console.log(action.next().value);
+console.log(action.next());
+
+
+// Generator Timer
+function* eachItem(arr){
+	for(i=0; i < arr.length; i++){
+		yield arr[i];
+	}
+}
+
+var letters = eachItem(["a", "b", "c"]);
+
+var abc = setInterval(function(){
+	var letter = letters.next();
+	if(letter.done){
+		clearInterval(abc);
+		console.log("letters are done");
+	}
+	else
+	{
+		console.log(letter.value);
+	}
+},1000)
